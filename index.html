@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- >>> -->
+<html lang="ru">
+<head>
+    <title>Йооооуууу</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden; /* Чтобы птичка не прокручивала страницу */
+        background-color: #87CEEB; /* Небесный фон */
+    }
+    a {
+    color: white;
+    text-decoration: none;
+    }
+    a:hover {
+    text-decoration: underline;
+    }
+
+    .right-float {
+        float: right;
+        width: 1000px;
+        background-color: rgb(255, 255, 255);
+        font-size: 24px;
+    }
+    .centered-text {
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        font-size: 30px;
+        color: red;
+        font-weight: bold;
+    }
+    .hover-effect {
+        color: rgb(255, 255, 255);
+        transition: color 0.3s;
+    }
+    .hover-effect:hover {
+        color: rgb(255, 0, 0);
+    }
+    .rounded-corners {
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 10px;
+    }
+    .shadow-box {
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        padding: 10px;
+    }
+    .animated-background {
+        background: linear-gradient(90deg, red, yellow, green, blue);
+        background-size: 400% 400%;
+        animation: gradient 5s infinite;
+    }
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    .underline-animation {
+            display: flex; /* Включаем flexbox для центрирования */
+            justify-content: center; /* Горизонтальное центрирование */
+            align-items: center; /* Вертикальное центрирование */
+            position: relative;
+            display: inline-block;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    .underline-animation::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: red;
+        transition: width 0.3s;
+    }
+    .underline-animation:hover::after {
+        width: 100%;
+    }
+    .dark-theme {
+        background-color: black;
+        color: white;
+        padding: 20px;
+    }
+    @keyframes shake {
+            0% { transform: translate(0px, 0px) rotate(0deg); }
+            20% { transform: translate(-2px, -2px) rotate(-2deg); }
+            40% { transform: translate(2px, -2px) rotate(2deg); }
+            60% { transform: translate(-2px, 2px) rotate(-2deg); }
+            80% { transform: translate(2px, 2px) rotate(2deg); }
+            100% { transform: translate(0px, 0px) rotate(0deg); }
+        }
+
+        /* Запуск тряски при наведении */
+        .shaking-text:hover {
+            animation: shake 0.3s infinite;
+        }
+    .bird {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-image: url('https://i.pinimg.com/originals/55/89/43/55894347fb556aa7f0c4b3763d1b3a26.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: fly 7s linear infinite;
+    }
+    @keyframes fly {
+        0% {
+            transform: translate(-100px, 50px) rotate(0deg); /* Вылетает слева */
+        }
+        25% {
+            transform: translate(25vw, 10vh) rotate(15deg); /* Поворачивается вверх */
+        }
+        50% {
+            transform: translate(50vw, 80vh) rotate(-15deg); /* Поворачивается вниз */
+        }
+        75% {
+            transform: translate(75vw, 30vh) rotate(10deg); /* Плавный подъем */
+        }
+        100% {
+            transform: translate(100vw, 50vh) rotate(0deg); /* Вылетает справа */
+        }
+    }
+</style>
+<body>
+
+    <div class="bird"></div>
+
+    <h1 class="animated-background">Добро пожаловать!</h1>
+    <h2 class="animated-background">Это закрытая вечеринка</h2>
+    <p class="hover-effect">АРБУЗ, АРБУЗ, АРБУЗ, АРБУЗ, АРБУЗ, АРБУЗ, АРБУЗ</p>
+    <img class="rounded-corners" src="https://steamuserimages-a.akamaihd.net/ugc/2506896672523519332/9B0306C3DCDDB65A3046ECF04B3B2C41D7DAC89D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false">
+    
+    <style>
+        body {
+            margin: 0;
+            background-image: url('https://yandex-images.clstorage.net/y56Dz0t81/9b70a2Q8tYr/jJbfK7n8hOOOXC-woQ9BUqrZDQSGBxbvmQ4dY4rwkBo1LfG4ckIVcpJXVFqAEuNM5bqjGWH4cs7VCKWxkHdC-5mGS_tubUTiy07tI6eMRVf53l3B1oFX7k9NHG0RrdlSe-eoMq8JC_WGApWbhxSz36t1s4pnqzqSTV-sN0brXa1FXtbtOKZGLIHMYrFoBcBeO5kMCFkPiOUSHErjXeMQ0rYlZ7hmR4RxBcMeVohPvVYnNibGLGN5Fk8ZoT8BrVbsjRrc77bpC66JBK3x48JMmPHeBg1XCUIo2p8BZ1xkU5a24SZ4bwhFekJMkdREyzLbZ_wmzOLpMJBAlOO4Savc6EAeWmN1r09riIGt8q5MBJQ5F84Nn8-K75zViOtUoRXb_Odl-eYHRv7CwdTQycz7XyK6KEUoo37Xid-rM4VnlWsH2B6mtClF50_B7LIoRY0VMlQMhBbFyOVVHAaomuGUX31goXFgj0N5hAeQlgFFtNThNyYDY2l50cMUa_kHIpMoSFGV63tuTGTITWj2407L1bLeQMORxk-jXBUF4lhvnJy35O52bwJGe0hJkt7Fx7lU7vnjwmVlNh2FmesxAS9W7cEXlyX-J4YoQgXqMSPACVi4U4cIVEzDqFtahK8Yb9oWeSZpuKfJSfiDSNWYgIQ6keewLklrqzqQjBxiNodg0O3AXhXqMKMK68dLLPOkBM3SOlHNzN_AR2zTUMbolOaVU3Vo777qz0P2zUzU0kXLfxYteWIMK-A4EcBWrHoGJxRkDFZSqnilz2GGRqpxJ4cOFX3YiQWRx4Um2xLB5FIp0BY-J6l-qEiNN80KlleLjf5RaPctzGzp8R8D1Kr2weObKAZflWbxKkrkzo6sveQDxRCy2U1AnIAE5lwRgCASZRKevKdlMuYCxbBKgBUYA8W7k-b_LwJnpLoXSJlvOMlqXGPFEFsqOSlNIceDqj3kCorUdJYMg9yGyOad2gUkVE'); /* Замените URL на нужное изображение */
+            background-size: cover; /* Изображение масштабируется, чтобы покрыть весь экран */
+            background-repeat: no-repeat; /* Изображение не повторяется */
+            background-position: center; /* Центрирование изображения */
+        }
+    </style>
+
+    <p class="right-float shadow-box"> [Припев]
+        Моё тп отменено <br>
+        Игра проиграна давно <br>
+        И это всё моя вина (Моя вина) <br>
+        И если тот день не вернуть <br>
+        Я всё равно продолжу путь <br>
+        Просто забудьте навсегда (Навсегда)</p>
+
+    <ol>
+        <li class="underline-animation">Мандарин</li>
+        <li class="underline-animation">Апельсин</li>
+    </ol>
+    <a href="https://americanhorrorstory.net/seasons/3-season/" target="_blank" class="hover-effect">НЕ ПЕРЕХОДИ</a>
+    <br>
+    <a href="https://papich.rulit.ru" target="_blank" class="hover-effect">У ПАПИЧА 123 айку</a>
+
+    <h2 class="centered-text dark-theme shaking-text">АПОФЕОЗ</h2>
+
+</body>
+</html>
