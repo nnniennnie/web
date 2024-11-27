@@ -1,0 +1,130 @@
+/* Универсальный селектор */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Селектор по тегу */
+h1 {
+    color: #ff4500;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Селектор по классу */
+.hover-effect {
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+    color: #ff6347;
+}
+
+/* Селектор по ID */
+#unique-header {
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Атрибутный селектор */
+a[target="_blank"] {
+    color: #4682b4;
+    font-weight: bold;
+}
+
+a[target="_blank"]:hover {
+    text-decoration: underline;
+}
+
+/* Селектор потомка */
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Селектор дочернего элемента */
+header > h2 {
+    color: #4caf50;
+}
+
+/* Селектор общего соседа */
+section ~ section {
+    margin-top: 20px;
+    border-top: 1px solid #dcdcdc;
+    padding-top: 10px;
+}
+
+/* Селектор смежного соседа */
+h1 + p {
+    font-size: 1.2em;
+    color: #2f4f4f;
+}
+
+/* Псевдокласс */
+button:hover {
+    background-color: #32cd32;
+    color: white;
+}
+
+/* Псевдоэлемент */
+p::first-line {
+    font-weight: bold;
+    color: #8b0000;
+}
+
+p::before {
+    content: "👉 ";
+    font-size: 1.2em;
+    color: #ffa07a;
+}
+
+p::after {
+    content: " 👈";
+    font-size: 1.2em;
+    color: #ffa07a;
+}
+
+/* Селектор по состоянию */
+input:focus {
+    border: 2px solid #00bfff;
+    outline: none;
+}
+
+/* Непустые элементы */
+div:not(:empty) {
+    border: 2px solid #8a2be2;
+    padding: 10px;
+}
+
+/* Селекторы с nth-child */
+ul li:nth-child(odd) {
+    background: #f0f8ff;
+}
+
+ul li:nth-child(even) {
+    background: #faebd7;
+}
+
+/* Корневой селектор */
+:root {
+    --primary-color: #ff6347;
+    --secondary-color: #4682b4;
+    --font-family: 'Verdana', sans-serif;
+}
+
+body {
+    background: var(--primary-color);
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+}
+
+/* Комплексный комбинированный селектор */
+div.container > p:first-child:not(.special) {
+    color: #20b2aa;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
