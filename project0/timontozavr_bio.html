@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Биография Тимонтозавра</title>
+    <link rel="icon" href="icon.webp">
+    <link rel="stylesheet" href="test.css">
+
+
+</head>
+<body>
+    <header>
+        <h1 class="title">Биография Тимонтозавра</h1>
+    </header>
+
+    <main>
+        <h2>Регистрация нового пользователя</h2>
+        <form method="POST" action="/register">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите имя" required>
+
+            <label for="dob">Дата рождения:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Пол:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label class="radio-label" for="male">Мужской</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label class="radio-label" for="female">Женский</label>
+                <input type="radio" id="other" name="gender" value="other" required>
+                <label class="radio-label" for="other">Другой</label>
+            </div>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Введите email" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
+
+            <label for="contact-time">Предпочитаемый способ связи:</label>
+            <div>
+                <input type="checkbox" id="morning" name="contact-time" value="morning">
+                <label class="checkbox-label" for="morning">Утро</label>
+                <input type="checkbox" id="afternoon" name="contact-time" value="afternoon">
+                <label class="checkbox-label" for="afternoon">День</label>
+                <input type="checkbox" id="evening" name="contact-time" value="evening">
+                <label class="checkbox-label" for="evening">Вечер</label>
+                <input type="checkbox" id="night" name="contact-time" value="night">
+                <label class="checkbox-label" for="night">Ночь</label>
+            </div>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </main>
+
+    <div class="main-container">
+        <div class="description-section">
+            <p>Тимонтозавр — это мифическое существо, известное своей мудростью и силой. Оно стало символом вдохновения для многих поколений. Его история берёт начало в древних землях и охватывает столетия приключений и открытий.</p>
+        </div>
+
+        <div class="form-section">
+            <div class="gravestone">
+                ☠ Надгробная плита ☠
+                <form method="POST" action="/submit">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите имя" required>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Введите сообщение" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="photo-gallery">
+        <img src="example.jpg" alt="Фото 1" class="full-span">
+        <img src="example.jpg" alt="Фото 2">
+        <img src="example.jpg" alt="Фото 3">
+        <img src="example.jpg" alt="Фото 4">
+        <img src="example.jpg" alt="Фото 5">
+        <img src="example.jpg" alt="Фото 6">
+        <img src="example.jpg" alt="Фото 7">
+        <img src="example.jpg" alt="Фото 8">
+        <img src="example.jpg" alt="Фото 9">
+        <img src="example.jpg" alt="Фото 10">
+        <img src="example.jpg" alt="Фото 11">
+        <img src="example.jpg" alt="Фото 12">
+    </div>
+
+    <div class="extra-section">
+        <h2>Легенды о Тимонтозавре</h2>
+        <p>В мрачных лесах и уединённых горах рассказывают множество историй о Тимонтозавре. Он охраняет тайны древних цивилизаций и помогает тем, кто отважится обратиться за помощью.</p>
+    </div>
+
+    <div class="extra-section">
+        <h2>Факты</h2>
+        <ul>
+            <li>Тимонтозавр считается символом знаний и силы.</li>
+            <li>Его упоминания встречаются в текстах, которым тысячи лет.</li>
+            <li>Легенды о Тимонтозавре вдохновили создание множества мифов.</li>
+        </ul>
+    </div>
+
+    <div class="extra-section">
+        <h2>Мифические сокровища</h2>
+        <p>Существует поверье, что Тимонтозавр хранит магические артефакты, которые могут изменить судьбу тех, кто их найдёт.</p>
+    </div>
+
+    <div class="links">
+        <p>Узнайте больше о Тимонтозавре:
+            <a href="https://example.com/timontozavr-story" target="_blank">история</a>,
+            <a href="https://example.com/timontozavr-art" target="_blank">искусство</a>,
+            <a href="https://example.com/timontozavr-facts" target="_blank">факты</a>.
+        </p>
+    </div>
+
+    <div class="end-message">
+        Конец страницы.<br>
+        Осторожно: что-то тёмное смотрит на тебя из-за экрана...
+    </div>
+    <script src="jaa.js"></script>
+
+</body>
+</html>

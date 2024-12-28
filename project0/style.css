@@ -1,0 +1,464 @@
+h1 {
+  color: darkred;
+  text-align: center;
+  font-family: Chalkduster;
+  position: relative;
+  top: 10px;
+  font-size: 40px;
+
+}
+/* Цвета: цвет текста задаётся через darkred, тени добавляют эффект глубины */
+h2 {
+  color: darkred;
+  text-align: center;
+  font-family: Chalkduster;
+  position: relative;
+  top: -30px;
+  font-size: 30px;
+
+}
+body {
+  margin: 0; /* Убираем отступы по умолчанию */
+  height: 100vh; /* Высота экрана */
+  background-image: url('7xm.xyz_631369.jpg'); /* Путь к изображению */
+  background-size: cover; /* Растянуть изображение, сохраняя пропорции */
+  background-position: center; /* Центрировать фон */
+  background-repeat: no-repeat; /* Отключить повтор */
+  background-color: rgb(0, 0, 0);
+  cursor: url('hallaween-pack/ii2.ani'), auto;
+}
+.bloody-text {
+font-size: 4rem;
+color: red; /* Основной цвет текста */
+text-shadow:
+0 2px 2px darkred,
+0 10px 1px black; /* Легкая тень для эффекта глубины */
+position: relative;
+}
+/* Тени: используются text-shadow для эффекта "кровавого текста" */
+.blood {
+  color:silver;
+  text-shadow:
+  4px 4px 1px #300000,
+  4px 6px 1px #400000,
+  4px 8px 1px #500000,
+  4px 10px 1px #600000,
+  4px 12px 1px #700000,
+  4px 14px 1px #800000,
+  4px 16px 1px #900000,
+  4px 18px 1px #A00000,
+  4px 20px 1px #B00000,
+  4px 22px 1px #C00000,
+  4px 24px 1px #D00000,
+  4px 26px 1px #E00000,
+  4px 28px 1px #F00000,
+  4px 30px 1px #FA0000,
+  4px 32px 1px #FB0000,
+  4px 34px 1px #FC0000,
+  4px 36px 1px #FD0000,
+  4px 38px 1px #FE0000,
+  4px 40px 2px #FF0000;
+}
+/* Анимации: keyframes для двигающегося текста при наведении */
+@keyframes headShake {
+0% {
+  transform: translateX(0);
+}
+6.5% {
+  transform: translateX(-6px) rotateY(-9deg);
+}
+18.5% {
+  transform: translateX(5px) rotateY(7deg);
+}
+31.5% {
+  transform: translateX(-3px) rotateY(-5deg);
+}
+43.5% {
+  transform: translateX(2px) rotateY(3deg);
+}
+50% {
+  transform: translateX(0);
+}
+}
+
+.headShake:hover {
+  animation: headShake 1s ease-in-out;
+}
+
+* {
+  cursor: none !important;
+}
+#mouse-pointer {
+  position: fixed;
+  left: -50px;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-image: url('ww.png'); /* Путь к изображению внешнего указателя */
+  background-size: cover; /* Изображение растягивается по размеру элемента */
+  background-repeat: no-repeat;
+  z-index: 99;
+  pointer-events: none;
+}
+
+#center-point {
+  position: fixed;
+  left: calc(50% - 3px);
+  top: calc(50% - 3px);
+  width: 20px; /* Размер центрального указателя */
+  height: 20px;
+  background-image: url('w.png'); /* Путь к изображению центрального указателя */
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 99;
+  pointer-events: none;
+  transition: transform 100ms linear; /* Анимация при клике */
+}
+
+/* Базовый стиль для изображения */
+.image-container img {
+width: 350px; /* Размер изображения */
+height: auto; /* Автоматическая высота */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+border-radius: 10px; /* Скругленные углы (опционально) */
+position: absolute;
+bottom: 145px; /* Расстояние от нижнего края окна */
+right: 1100px; /* Расстояние от правого края окна */
+}
+
+/* Эффект при наведении */
+.image-container img:hover {
+transform: scale(1.2); /* Увеличение изображения */
+border-radius: 60%; /* Сделает тень круглой */
+background: radial-gradient(circle, rgba(255, 255, 255, 0.334) 0%, rgba(255, 255, 255, 0) 70%);
+z-index: 1;
+}
+
+/* Размеры для улитки */
+#snail img {
+position: absolute;
+bottom: 150px;
+right: 250px;
+height: 96px;
+width: auto;
+}
+
+/* Размеры для руки */
+#snail_hand img {
+position: absolute;
+bottom: 193px;
+right: 338px;
+height: 23px;
+width: auto;
+}
+
+/* Анимация при наведении */
+#snail:hover #snail_hand img {
+animation: wobble 1s infinite ease-in;
+}
+
+/* Определение анимации */
+@keyframes wobble {
+0% {
+  transform: rotate(0deg);
+  transform-origin: 0% 0%;
+}
+25% {
+  transform: rotate(15deg);
+  transform-origin: 70% 70%;
+}
+75% {
+  transform: rotate(-15deg);
+  transform-origin: 70% 70%;
+}
+100% {
+  transform: rotate(0deg);
+  transform-origin: 0% 0%;
+}
+}
+.glazki {
+position: absolute;
+width: 100px;
+height: auto;
+top: 1000px;
+left: 1100px;
+}
+/* Контейнер для наведения */
+.hover-container {
+position: absolute;
+bottom: 144px; /* Позиционируем контейнер */
+right: 800px;
+width: 350px; /* Размер контейнера совпадает с tgska */
+height: auto;
+}
+
+/* Скрытая область с фоном и QR-кодом */
+.hover-effect {
+position: absolute;
+bottom: 355px;
+right: -79px;
+width: 500px;
+height: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+pointer-events: none; /* Исключает из взаимодействий */
+transition: opacity 0.5s ease;
+z-index: 10;
+}
+
+/* Фон */
+.hover-effect .background {
+position: absolute;
+width: 250px; /* Покрывает весь контейнер */
+height: auto;
+object-fit: cover;
+z-index: 0;
+}
+
+/* QR-код */
+.hover-effect .qrcode {
+position: relative;
+z-index: 1; /* Поверх фона */
+width: 250px; /* Пропорциональный размер QR-кода */
+height: auto;
+border-radius: 5px; /* Небольшое скругление */
+}
+
+/* Изображение "tgska" */
+.tgska {
+display: block;
+width: 100%; /* Растягивается на весь контейнер */
+height: auto;
+border-radius: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Анимация при наведении */
+.tgska:hover {
+transform: scale(1.2); /* Увеличение изображения */
+border-radius: 60%; /* Сделает тень круглой */
+background: radial-gradient(circle, rgba(255, 255, 255, 0.334) 0%, rgba(255, 255, 255, 0) 70%);
+z-index: 1;
+}
+
+.tgska:hover + .hover-effect,
+.hover-effect:hover {
+opacity: 1; /* Видимость включается */
+pointer-events: auto; /* Включает возможность взаимодействия */
+}
+
+/* Основной контент */
+.main-content {
+padding: 20px;
+opacity: 0; /* Изначально невидим */
+transition: opacity 1s ease; /* Плавное появление */
+}
+
+.main-content.visible {
+opacity: 1; /* Полная видимость */
+}
+
+header {
+display: flex;
+justify-content: center;
+position: absolute;
+top: 220px; /* Сдвиг вверх */
+height: 100vh;
+width: 100%; /* Занимает всю ширину */
+z-index: -1;
+}
+
+#greeting {
+font-size: 35px; /* Размер шрифта */
+color: black; /* Цвет текста */
+font-family: "Cattedrale-Regular", Regular;
+text-shadow: 0px 0px 6px #fffcfc;
+}
+
+@font-face {
+font-family: 'Cattedrale-Regular'; /* Укажите имя шрифта */
+src: url('./fonts/Cattedrale-Regular.ttf') format('truetype'); /* Укажите путь к файлу и его формат */
+font-weight: normal; /* Вес шрифта (400, 700 и т.д.) */
+font-style: normal;  /* Стиль шрифта (normal или italic) */
+}
+
+.welcome-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 120vh;
+background-color: rgb(0, 0, 0);
+position: absolute;
+width: 100%;
+top: 0;
+left: 0;
+opacity: 1;
+z-index: 10;
+transition: opacity 1s ease;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-container.fade-out {
+opacity: 0;
+pointer-events: none;
+}
+
+input#login {
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-right: 10px;
+}
+
+button {
+padding: 12px 20px;
+font-size: 16px;
+background-color: #b0000058;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #3f0505c5;
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+.eye {
+position: absolute;
+width: 90px;
+height: 90px;
+background-color: white;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+.pupil {
+width: 30px;
+height: 30px;
+background-color: black;
+border-radius: 50%;
+position: relative;
+}
+.eyelid {
+position: absolute;
+top: 0;
+left: 0;
+width: 130%;
+height: 130%;
+background-color: black;
+border-radius: 10%;
+transform-origin: top center;
+transform: scaleY(0);
+transition: transform 0.2s ease-in-out;
+}
+.eye.left {
+top: 20%;
+left: 45%;
+transform: translate(-50%, -50%);
+}
+.eye.right {
+top: 20%;
+left: 55%;
+transform: translate(-50%, -50%);
+}
+.eye.blinking .eyelid {
+transform: scaleY(1);
+}
+
+.logo {
+position: absolute;
+text-align: center;
+width: 700px;
+height: auto;
+bottom: 300px;
+left: 520px;
+z-index: -10;
+}
+
+#candeliabr-container {
+position: absolute;
+bottom: 180px; /* Расстояние от нижнего края окна */
+right: 480px; /* Расстояние от правого края окна */
+}
+
+/* Анимация и стиль изображения */
+#candeliabr {
+width: 450px; /* Размер изображения */
+height: auto;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+border-radius: 10px; /* Скругленные углы */
+}
+
+/* Эффект при наведении на изображение */
+#candeliabr:hover {
+transform: scale(1.2); /* Увеличение изображения */
+border-radius: 60%; /* Сделает тень круглой */
+background: radial-gradient(circle, rgba(255, 255, 255, 0.334) 0%, rgba(255, 255, 255, 0) 70%);
+z-index: 1;
+}
+
+
+/* Диалоговое окно */
+#dialog {
+opacity: 0; /* Изначально окно невидимо */
+display: block; /* Всегда присутствует, но скрыто */
+position: absolute;
+top: 110px; /* Положение окна над изображением */
+left: 350px; /* Центрирование относительно контейнера */
+background: rgba(0, 0, 0, 0.9); /* Полупрозрачный фон */
+color: white; /* Белый текст */
+padding: 15px;
+border-radius: 10px; /* Скругленные углы */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень */
+text-align: center;
+z-index: 10; /* Поверх изображения */
+width: 250px; /* Ширина окна */
+transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное появление */
+transform: scale(0.9); /* Уменьшенное окно до появления */
+pointer-events: none; /* Отключение взаимодействия */
+}
+
+/* При наведении на контейнер отображаем окно */
+#candeliabr-container:hover #dialog {
+opacity: 1; /* Делает окно видимым */
+transform: scale(1); /* Увеличивает до нормального размера */
+pointer-events: auto; /* Включение взаимодействия */
+}
+
+/* Кнопки в диалоговом окне */
+#dialog button {
+margin: 5px;
+margin-top: 20px; /* Увеличивает отступ между текстом и кнопками */
+padding: 10px 30px;
+border: none;
+background-color: #333; /* Темный фон */
+color: white; /* Белый текст */
+border-radius: 5px; /* Скругленные углы */
+cursor: pointer;
+font-family: "Cattedrale-Regular", Regular;
+transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+#dialog button:hover {
+background-color: #555; /* Светлее при наведении */
+color: darkred; /* Бордовый текст при наведении */
+
+}
